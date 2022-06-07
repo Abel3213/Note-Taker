@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use('/api', require('./routes/apiRoutes'));
 app.use('/', require('./routes/htmlRoutes'));
 
 
